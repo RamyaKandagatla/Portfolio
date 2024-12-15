@@ -1,5 +1,6 @@
 import React from "react";
 import netflixgpt from "../assets/projects/netflixgpt.png";
+import foodDeliveryApp from '../assets/projects/foodDeliveryApp.png';
 
 const Portfolio = () => {
   const portfolios = [
@@ -13,7 +14,7 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      src: netflixgpt,
+      src: foodDeliveryApp,
     },
     {
       id: 4,
@@ -21,14 +22,14 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      src: netflixgpt,
+      src: foodDeliveryApp,
     },
   ];
 
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className="bg-gradient-to-b from-gray-800 to-black w-full text-white md:h-screen pt-28"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">

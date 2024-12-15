@@ -16,6 +16,10 @@ const NavBar = () => {
     },
     {
       id: 3,
+      title: "projects",
+    },
+    {
+      id: 3,
       title: "portfolio",
     },
     {
@@ -36,7 +40,7 @@ const NavBar = () => {
         {navLinks.map(({ id, title }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200"
+            className="px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 capitalize"
           >
             <Link to={title} smooth duration={500}>
               {title}
@@ -54,7 +58,7 @@ const NavBar = () => {
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
           {navLinks.map(({ id, title }) => (
-            <li key={id} className="px-4 cursor-pointer py-6 text-4xl">
+            <li key={id} className="px-4 cursor-pointer py-6 text-4xl capitalize">
               <Link
                 onClick={() => setnav(!nav)}
                 to={title}

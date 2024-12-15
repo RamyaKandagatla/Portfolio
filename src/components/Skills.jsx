@@ -5,6 +5,11 @@ import github from "../assets/github.png";
 import javaScript from "../assets/js.png";
 import reactImage from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
+import typescript from '../assets/typescript.png';
+import python from '../assets/python.png';
+import mysql from '../assets/mysql.jpeg';
+import firebase from '../assets/firebase.png';
+import awsS3 from '../assets/awsS3.png';
 
 const Skills = () => {
   const techStacks = [
@@ -28,27 +33,57 @@ const Skills = () => {
     },
     {
       id: 4,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
+      src: typescript,
+      title: "TypeScript",
+      style: "shadow-blue-500",
     },
     {
       id: 5,
-      src: tailwind,
-      title: "Tailwind CSS",
-      style: "shadow-sky-400",
+      src: reactImage,
+      title: "React",
+      style: "shadow-sky-300",
     },
     {
       id: 6,
+      src: tailwind,
+      title: "Tailwind CSS",
+      style: "shadow-sky-500",
+    },
+    {
+      id: 7,
       src: github,
       title: "Github",
       style: "shadow-gray-400",
     },
+    {
+      id: 8,
+      src: mysql,
+      title: "MySQL",
+      style: "shadow-blue-800",
+    },
+    {
+      id: 9,
+      src: firebase,
+      title: "Firebase",
+      style: "shadow-orange-700",
+    },
+    {
+      id: 10,
+      src: awsS3,
+      title: "AWS S3",
+      style: "shadow-red-500",
+    },
+    {
+      id: 11,
+      src: python,
+      title: "Python",
+      style: "shadow-yellow-500",
+    }
   ];
   return (
     <div
       name="skills"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
+      className="bg-gradient-to-b from-black to-gray-800 w-full pt-20"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
