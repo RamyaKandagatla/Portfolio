@@ -16,24 +16,24 @@ const NavBar = () => {
     },
     {
       id: 3,
-      title: "projects",
-    },
-    {
-      id: 3,
-      title: "portfolio",
+      title: "experience",
     },
     {
       id: 4,
-      title: "skills",
+      title: "projects",
     },
     {
       id: 5,
+      title: "skills",
+    },
+    {
+      id: 6,
       title: "contact",
     },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-10">
       <h1 className="text-4xl font-signature">Ramya Kandagatla</h1>
 
       <ul className="hidden md:flex">

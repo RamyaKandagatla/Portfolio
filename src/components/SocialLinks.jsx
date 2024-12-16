@@ -12,20 +12,20 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/ramyakandagatla/",
       style: "rounded-tr-md",
     },
     {
-      id: 1,
+      id: 2,
       child: (
         <>
           Github <FaGithub size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "https://github.com/RamyaKandagatla",
     },
     {
-      id: 1,
+      id: 3,
       child: (
         <>
           Mail <HiOutlineMail size={30} />
@@ -34,7 +34,7 @@ const SocialLinks = () => {
       href: "mailto:kandagatlaramya5@gmail.com",
     },
     {
-      id: 1,
+      id: 4,
       child: (
         <>
           Resume <BsFillPersonLinesFill size={30} />
@@ -47,7 +47,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="hidden xl:flex flex-col top-[35%] left-0 fixed">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
           <li
