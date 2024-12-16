@@ -15,7 +15,7 @@ const Home = () => {
         id: 1,
         child: (
           <>
-            <FaLinkedin size={40} />
+            <FaLinkedin size={30} />
           </>
         ),
         href: "https://www.linkedin.com/in/ramyakandagatla/",
@@ -25,7 +25,7 @@ const Home = () => {
         id: 2,
         child: (
           <>
-            <FaGithub size={40} />
+            <FaGithub size={30} />
           </>
         ),
         href: "https://github.com/RamyaKandagatla",
@@ -35,7 +35,7 @@ const Home = () => {
         id: 3,
         child: (
           <>
-            <SiLeetcode size={40} />
+            <SiLeetcode size={30} />
           </>
         ),
         href: "https://leetcode.com/u/Kandagatla_Ramya/",
@@ -45,7 +45,7 @@ const Home = () => {
         id: 4,
         child: (
           <>
-            <HiOutlineMail size={40} />
+            <HiOutlineMail size={30} />
           </>
         ),
         href: "mailto:kandagatlaramya5@gmail.com",
@@ -55,7 +55,7 @@ const Home = () => {
         id: 5,
         child: (
           <>
-            <BsFillPersonLinesFill size={40} />
+            <BsFillPersonLinesFill size={30} />
           </>
         ),
         href: "/Ramya_Kandagatla_Resume.pdf",
@@ -81,7 +81,7 @@ const Home = () => {
 
           <div className="flex xl:hidden justify-start space-x-6 py-6">
             {links.map(({ id, child, href, download, style }) => (
-              <a key={id} href={href} target="_blank" rel="noopener noreferrer" download={download} className={`duration-200 hover:scale-125 ${style}`}>
+              <a key={id} href={href} target="_blank" rel="noopener noreferrer" download={download} className={`duration-300 hover:scale-125 text-white`}>
                 {child}
               </a>
             ))}
