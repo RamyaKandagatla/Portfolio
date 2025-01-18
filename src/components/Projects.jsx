@@ -1,5 +1,4 @@
 import React from "react";
-import netflixgpt from "../assets/projects/netflixgpt.png";
 import foodDeliveryApp from '../assets/projects/foodDeliveryApp.png';
 import weatherApp from '../assets/projects/weatherApp.png';
 
