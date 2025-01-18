@@ -6,82 +6,86 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
-
+import WordByWordText from "./WordByWordText";
 
 const Home = () => {
-
-    const links = [
-      {
-        id: 1,
-        child: (
-          <>
-            <FaLinkedin size={30} />
-          </>
-        ),
-        href: "https://www.linkedin.com/in/ramyakandagatla/",
-        style: "text-blue-600 hover:text-blue-800"
-      },
-      {
-        id: 2,
-        child: (
-          <>
-            <FaGithub size={30} />
-          </>
-        ),
-        href: "https://github.com/RamyaKandagatla",
-        style: "text-gray-400 hover:text-gray-300"
-      },
-      {
-        id: 3,
-        child: (
-          <>
-            <SiLeetcode size={30} />
-          </>
-        ),
-        href: "https://leetcode.com/u/Kandagatla_Ramya/",
-        style: "text-green-500 hover:text-green-700"
-      },
-      {
-        id: 4,
-        child: (
-          <>
-            <HiOutlineMail size={30} />
-          </>
-        ),
-        href: "mailto:kandagatlaramya5@gmail.com",
-        style: "text-yellow-600 hover:text-yellow-800"
-      },
-      {
-        id: 5,
-        child: (
-          <>
-            <BsFillPersonLinesFill size={30} />
-          </>
-        ),
-        href: "/Ramya_Kandagatla_Resume.pdf",
-        download: true,
-        style: "text-red-500 hover:text-red-700"
-      },
-    ];
+  const links = [
+    {
+      id: 1,
+      child: (
+        <>
+          <FaLinkedin size={30} />
+        </>
+      ),
+      href: "https://www.linkedin.com/in/ramyakandagatla/",
+      style: "text-blue-600 hover:text-blue-800",
+    },
+    {
+      id: 2,
+      child: (
+        <>
+          <FaGithub size={30} />
+        </>
+      ),
+      href: "https://github.com/RamyaKandagatla",
+      style: "text-gray-400 hover:text-gray-300",
+    },
+    {
+      id: 3,
+      child: (
+        <>
+          <SiLeetcode size={30} />
+        </>
+      ),
+      href: "https://leetcode.com/u/Kandagatla_Ramya/",
+      style: "text-green-500 hover:text-green-700",
+    },
+    {
+      id: 4,
+      child: (
+        <>
+          <HiOutlineMail size={30} />
+        </>
+      ),
+      href: "mailto:kandagatlaramya5@gmail.com",
+      style: "text-yellow-600 hover:text-yellow-800",
+    },
+    {
+      id: 5,
+      child: (
+        <>
+          <BsFillPersonLinesFill size={30} />
+        </>
+      ),
+      href: "/Ramya_Kandagatla_Resume.pdf",
+      download: true,
+      style: "text-red-500 hover:text-red-700",
+    },
+  ];
 
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 pt-28"
+      className="w-full bg-gradient-to-b from-black via-black to-gray-800 py-28"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a Frontend Developer
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-around px-4 md:flex-row">
+        <div className="flex flex-col justify-center space-y-5">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[rgb(255,1,79)] opacity-100">
+            Ramya Kandagatla
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
-            Highly skilled Software Engineer with almost 3 years of experience
-            in frontend development, specializing in React.js.
-          </p>
-
-          <div className="flex xl:hidden justify-start space-x-6 py-6">
-            {links.map(({ id, child, href, download, style }) => (
-              <a key={id} href={href} target="_blank" rel="noopener noreferrer" download={download} className={`duration-300 hover:scale-125 text-white`}>
+          <h2 className="text-3xl sm:text-5xl font-bold text-white">
+            <WordByWordText />
+          </h2>
+          <div className="flex xl:hidden justify-center space-x-6 py-6">
+            {links.map(({ id, child, href, download }) => (
+              <a
+                key={id}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                download={download}
+                className={`duration-300 hover:scale-125 text-white`}
+              >
                 {child}
               </a>
             ))}
@@ -101,12 +105,11 @@ const Home = () => {
             </Link>
           </div> */}
         </div>
-
-        <div>
+        <div className="md:mt-10">
           <img
             src={myPhoto}
             alt="profile"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
+            className="rounded-full mx-auto md:w-full h-96 md:object-cover"
           />
         </div>
       </div>

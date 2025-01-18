@@ -63,8 +63,8 @@ const Experience = () => {
 					</li>
 					<li>Achieved the following outcomes:
 						<ol className="list-disc ml-6">
-							<li>35% reduction in page load time.</li>
-							<li>15% increase in user retention.</li>
+							<li><strong>35% reduction</strong> in page load time.</li>
+							<li><strong>15% increase</strong> in user retention.</li>
 							<li>Delivered a smoother and more efficient user experience.</li>
 						</ol>
 					</li>
@@ -96,18 +96,18 @@ const Experience = () => {
     <div name='experience'
 		className="w-full bg-gradient-to-b from-black to-gray-800 text-white py-28"
 		>
-			<div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+			<div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center">
 				<div className="pb-8">
-					<p className="text-4xl font-bold inline border-b-4 border-gray-500">Experience</p>
+					<p className="text-4xl font-bold inline text-[rgb(255,1,79)] opacity-100">EXPERIENCE</p>
 				</div>
 
 				
-        <div className="grid gap-8">
+        <div className="grid gap-8 my-1 mx-3">
           {projects.map(({ id, title, description, techStacks, style }) => (
-            <div key={id} className={`shadow-md shadow-gray-600 rounded-lg w-full max-w-md md:max-w-lg lg:max-w-xl p-4 ${style} hover:scale-105 duration-500`}>
-              <h3>{title}</h3>
-							<p className='text-gray-500 p-2'>{description}</p>
-							<p className='p-2'>TechStacks: <span className='text-gray-500'>{techStacks}</span></p>
+            <div key={id} className={`text-slate-300 bg-gradient-to-b from-gray-900 to-gray-700 shadow-md shadow-gray-600 rounded-lg w-full max-w-md md:max-w-lg lg:max-w-xl p-6 ${style} hover:scale-105 duration-500`}>
+              <h3 className='text-white font-bold'>{title}</h3>
+							<p className='p-2'>{description}</p>
+							<p className='p-2'><span className='text-white font-bold'>TechStacks: </span><span>{techStacks}</span></p>
             </div>
           ))}
         </div>

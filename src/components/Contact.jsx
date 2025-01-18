@@ -4,12 +4,12 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black p-4 text-white pt-20 pb-20"
+      className="w-full bg-gradient-to-b from-gray-800 to-black p-4 text-white py-28"
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Contact
+          <p className="text-4xl font-bold inline text-[rgb(255,1,79)] opacity-100">
+            CONTACT
           </p>
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
@@ -40,7 +40,7 @@ const Contact = () => {
             />
 
             <button
-              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto 
+              className="text-white font-bold bg-[rgb(255,1,79)] opacity-100 px-6 py-3 my-8 mx-auto 
             flex items-center rounded-md hover:scale-110 duration-300"
             >
               Let's talk

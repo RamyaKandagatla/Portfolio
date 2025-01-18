@@ -33,14 +33,14 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-10">
-      <h1 className="text-4xl font-signature">Ramya Kandagatla</h1>
+    <div className="flex justify-end md:justify-around items-center w-full h-20 px-2 text-white bg-black fixed z-10">
+      {/* <h1 className="text-4xl font-signature">Ramya Kandagatla</h1> */}
 
       <ul className="hidden md:flex">
         {navLinks.map(({ id, title }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 capitalize"
+            className="px-4 cursor-pointer font-large text-slate-300 hover:scale-105 hover:text-[rgb(255,1,79)] opacity-100 font-bold duration-200 capitalize"
           >
             <Link to={title} smooth duration={500}>
               {title}
