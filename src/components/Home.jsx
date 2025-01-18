@@ -66,9 +66,9 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="w-full bg-gradient-to-b from-black via-black to-gray-800 py-28"
+      className="w-full bg-gradient-to-b from-black via-black to-gray-800 py-28 justify-center"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-around px-4 md:flex-row">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-between px-4 md:flex-row">
         <div className="flex flex-col justify-center space-y-5">
           <h2 className="text-3xl sm:text-5xl font-bold text-[rgb(255,1,79)] opacity-100">
             Ramya Kandagatla
