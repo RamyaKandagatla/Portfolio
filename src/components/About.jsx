@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -6,29 +7,34 @@ const About = () => {
       name="about"
       className="w-full bg-gradient-to-b from-gray-800 to-black text-white py-28"
     >
-      <div className="max-w-screen-lg p-2 mx-auto flex flex-col justify-between">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline text-[rgb(255,1,79)] opacity-100">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-between">
+        <div className="pb-4">
+          <p className="text-4xl font-bold inline text-[rgb(255,1,79)]">
             ABOUT
           </p>
+          <div className="w-20 h-1 mt-2 bg-[rgb(255,1,79)] rounded-full"></div>
         </div>
-        <div className="text-slate-300 bg-gradient-to-b from-gray-700 to-gray-900 text-md shadow-md shadow-gray-600 rounded-lg p-10 mx-1">
-          <p className="mt-4">
-            Highly skilled Software Engineer with almost 3 years of experience in
-            frontend development, specializing in React.js. Proficient in data
-            structures and algorithms, with a proven track record of successfully
-            delivering features across multiple platforms and ensuring stable
-            releases. Experienced in developing responsive websites and committed
-            to excellence in problem-solving and communication. Possesses strong
-            knowledge of React.js, JavaScript, and Webpack.
-          </p>
-          <br />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-slate-300 bg-gradient-to-b from-gray-700 to-gray-900 text-md md:text-lg leading-relaxed shadow-md shadow-gray-600 rounded-lg p-10 mx-1 space-y-4"
+        >
           <p>
-            Spearheaded the development, deployment, and maintenance of the PD/PRV frontend module,
-            taking full ownership of the process. Conducted thorough code reviews and implemented
-            industry best practices to optimize performance and improve code quality
+            <strong>Software Engineer</strong> with nearly <strong>3 years</strong> of experience
+            specializing in frontend development using <strong>React.js</strong>. Adept at building
+            responsive user interfaces, optimizing performance, and ensuring high-quality releases
+            across multiple platforms. Strong in data structures and algorithms, and recognized for
+            delivering stable, well-tested features.
           </p>
-        </div>
+
+          <p>
+            Led the complete lifecycle of the <strong>PD/PRV frontend module</strong> — from development to
+            deployment and maintenance. Conducted in-depth code reviews, enforced industry best
+            practices, and continuously improved both code quality and application performance.
+          </p>
+        </motion.div>
       </div>
     </div>
   );

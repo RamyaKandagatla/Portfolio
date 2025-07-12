@@ -1,19 +1,33 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const WordByWordText = () => {
-  const text = 'Frontend  Developer'
+  const text = "Frontend Developer";
+
   return (
-    <div className="flex flex-wrap w-full break-words">
+    <motion.div
+      className="flex flex-wrap w-full break-words"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }} // ensures animation only runs once
+      variants={{
+        visible: { transition: { staggerChildren: 0.05 } },
+      }}
+    >
       {text.split("").map((char, index) => (
-        <div
+        <motion.span
           key={index}
-          className="break-words opacity-0 animate-fade-in"
-          style={{ animationDelay: `${index * 0.1}s` }}
+          className="break-words text-white"
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           {char === " " ? "\u00A0" : char}
-        </div>
+        </motion.span>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

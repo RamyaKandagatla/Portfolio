@@ -1,120 +1,124 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
+  const projects = [
+    {
+      id: 1,
+      title: 'Selfie PRV (Profile Re-Verification) Offer',
+      description: (
+        <ol className="list-disc ml-6 space-y-1">
+          <li>
+            Designed and implemented the <strong>Selfie PRV</strong> feature across:
+            <ol className="list-disc ml-6">
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Web</li>
+              <li>Weblink</li>
+            </ol>
+          </li>
+          <li>Allowed users to re-upload selfies if rejected.</li>
+          <li>
+            Impact:
+            <ol className="list-disc ml-6">
+              <li>Loan disbursal increased by <strong>0.25%</strong>.</li>
+              <li>Conversion rate rose by <strong>4–5%</strong>.</li>
+            </ol>
+          </li>
+        </ol>
+      ),
+      techStacks: 'React.js, JavaScript, TypeScript, HTML, CSS, AWS S3, Firebase, MySQL',
+      style: 'justify-self-start'
+    },
+    {
+      id: 2,
+      title: 'Dynamic Image Capture for VKYC',
+      description: (
+        <ol className="list-disc ml-6 space-y-1">
+          <li>Built dynamic image capture for DBL and LAP customers.</li>
+          <li>Used Firebase Database for personalized dropdowns.</li>
+          <li>
+            Outcomes:
+            <ol className="list-disc ml-6">
+              <li>Streamlined loan processing.</li>
+              <li>Reduced verification errors.</li>
+              <li>Accelerated approvals.</li>
+              <li><strong>15% increase</strong> in loan approval rate.</li>
+            </ol>
+          </li>
+        </ol>
+      ),
+      techStacks: 'React.js, JavaScript, HTML, CSS, AWS S3, Firebase',
+      style: 'justify-self-end'
+    },
+    {
+      id: 3,
+      title: 'Code Splitting with @loadable/component',
+      description: (
+        <ol className="list-disc ml-6 space-y-1">
+          <li>Replaced <code>react-loadable</code> with <code>@loadable/component</code>.</li>
+          <li>
+            Benefits:
+            <ol className="list-disc ml-6">
+              <li><strong>35% faster</strong> page load time.</li>
+              <li><strong>15% boost</strong> in retention.</li>
+              <li>Smoother UX and better maintainability.</li>
+            </ol>
+          </li>
+        </ol>
+      ),
+      techStacks: 'React.js, JavaScript, AWS S3',
+      style: 'justify-self-start'
+    },
+    {
+      id: 4,
+      title: 'App Scaling for Responsive UX',
+      description: (
+        <ol className="list-disc ml-6 space-y-1">
+          <li>Built viewport scaling logic based on device screen/resolution.</li>
+          <li>Improved layout consistency across devices.</li>
+          <li><strong>30% increase</strong> in user engagement.</li>
+        </ol>
+      ),
+      techStacks: 'React.js, JavaScript, HTML, CSS',
+      style: 'justify-self-end'
+    }
+  ];
 
-	const projects = [
-		{
-			id: 1,
-			title: 'Selfie PRV(Profile Re-Verification) Offer',
-			description: (
-				<ol className="list-disc ml-6">
-					<li>Designed and implemented the <strong>Selfie PRV (Profile Re-Verification)</strong> feature across multiple platforms:
-						<ol className="list-disc ml-6">
-							<li>Android</li>
-							<li>iOS</li>
-							<li>Web</li>
-							<li>Weblink</li>
-						</ol>
-					</li>
-					<li>Enabled customers rejected due to improper selfies to re-upload their images.</li>
-					<li>Achieved the following improvements:
-						<ol class="list-disc ml-6">
-							<li>Boosted loan disbursal by <strong>0.25%</strong>.</li>
-							<li>Increased overall user conversion rate by <strong>4-5%</strong>.</li>
-						</ol>
-					</li>
-				</ol>
-			),
-			techStacks: 'React.js, JavaScript, TypeScript, HTML, CSS, AWS S3, Firebase, MySQL',
-			style: 'justify-self-start'
-		},
-		{
-			id: 2,
-			title: 'Developed Dynamic Image Capture Feature for VKYC',
-			description: (
-				<ol className="list-disc ml-6">
-					<li>Engineered dynamic image capture for DBL and LAP customers, streamlining the VKYC process by ensuring required documents were captured during the call.</li>
-					<li>Utilized Firebase Database to generate customer-specific document drop-downs.</li>
-					<li>Achieved the following improvements:
-						<ol className="list-disc ml-6">
-							<li>Improved loan processing efficiency.</li>
-							<li>Reduced errors during the verification process.</li>
-							<li>Accelerated approval times.</li>
-							<li>Increased overall loan approval rate by <strong>15%</strong> for DBL and LAP customers.</li>
-						</ol>
-					</li>
-				</ol>
-			),
-			techStacks: 'React.js, JavaScript, HTML, CSS, AWS S3, firebase',
-			style: 'justify-self-end'
-		},
-		{
-			id: 3,
-			title: 'Migrated to @loadable/component for Code Splitting',
-			description: (
-				<ol className="list-disc ml-6">
-					<li>Spearheaded the migration from <code>react-loadable</code> to <code>@loadable/component</code> for code splitting.</li>
-					<li>Enhanced application performance and maintainability through:
-						<ol className="list-disc ml-6">
-							<li>Strategic planning.</li>
-							<li>Comprehensive code refactoring.</li>
-							<li>Rigorous testing.</li>
-						</ol>
-					</li>
-					<li>Achieved the following outcomes:
-						<ol className="list-disc ml-6">
-							<li><strong>35% reduction</strong> in page load time.</li>
-							<li><strong>15% increase</strong> in user retention.</li>
-							<li>Delivered a smoother and more efficient user experience.</li>
-						</ol>
-					</li>
-				</ol>
-			),
-			techStacks: 'React.js, JavaScript, AWS S3',
-			style: 'justify-self-start'
-		},
-		{
-			id: 4,
-			title: 'Optimized App Scaling for Enhanced Responsiveness',
-			description: (
-				<ol className="list-disc ml-6">
-					<li>Designed and implemented a viewport scaling logic based on:
-						<ol className="list-disc ml-6">
-							<li>Device screen size.</li>
-							<li>Device resolution.</li>
-						</ol>
-					</li>
-					<li>Optimized layouts and usability across all devices.</li>
-					<li>Achieved a <strong>30% increase in user engagement</strong> through responsive design.</li>
-				</ol>
-			),
-			techStacks: 'React.js, JavaScript, HTML, CSS',
-			style: 'justify-self-end'
-		}
-	]
   return (
-    <div name='experience'
-		className="w-full bg-gradient-to-b from-black to-gray-800 text-white py-28"
-		>
-			<div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center">
-				<div className="pb-8">
-					<p className="text-4xl font-bold inline text-[rgb(255,1,79)] opacity-100">EXPERIENCE</p>
-				</div>
-
-				
-        <div className="grid gap-8 my-1 mx-3">
-          {projects.map(({ id, title, description, techStacks, style }) => (
-            <div key={id} className={`text-slate-300 bg-gradient-to-b from-gray-900 to-gray-700 shadow-md shadow-gray-600 rounded-lg w-full max-w-md md:max-w-lg lg:max-w-xl p-6 ${style} hover:scale-105 duration-500`}>
-              <h3 className='text-white font-bold'>{title}</h3>
-							<p className='p-2'>{description}</p>
-							<p className='p-2'><span className='text-white font-bold'>TechStacks: </span><span>{techStacks}</span></p>
-            </div>
-          ))}
+    <div
+      name="experience"
+      className="w-full bg-gradient-to-b from-black to-gray-800 text-white py-28"
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center">
+        <div className="pb-6">
+          <p className="text-4xl font-bold inline text-[rgb(255,1,79)]">
+            EXPERIENCE
+          </p>
+          <div className="w-20 h-1 mt-2 bg-[rgb(255,1,79)] rounded-full"></div>
         </div>
 
-			</div>
+        <div className="grid gap-10 my-6 mx-3">
+          {projects.map(({ id, title, description, techStacks, style }) => (
+            <motion.article
+              key={id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: id * 0.1 }}
+              className={`text-slate-300 bg-gradient-to-b from-gray-900 to-gray-700 shadow-md shadow-gray-600 rounded-lg w-full max-w-2xl p-6 ${style} hover:scale-105 duration-500`}
+            >
+              <h3 className="text-white font-semibold text-xl mb-2">{title}</h3>
+              <div className="leading-relaxed text-base">{description}</div>
+              <p className="mt-4 text-sm text-gray-300">
+                <span className="text-white font-semibold">Tech Stack: </span>
+                {techStacks}
+              </p>
+            </motion.article>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

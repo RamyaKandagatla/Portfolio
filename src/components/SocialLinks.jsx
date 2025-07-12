@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const SocialLinks = () => {
   const links = [
@@ -59,9 +60,12 @@ const SocialLinks = () => {
   return (
     <div className="hidden xl:flex flex-col top-[35%] left-0 fixed">
       <ul>
-        {links.map(({ id, child, href, style, download }) => (
-          <li
+        {links.map(({ id, child, href, style, download }, index) => (
+          <motion.li
             key={id}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
             className={`flex justify-between items-center w-40 h-14 px-4 bg-gray-500 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 ${style}`}
           >
             <a
@@ -73,7 +77,7 @@ const SocialLinks = () => {
             >
               {child}
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>
